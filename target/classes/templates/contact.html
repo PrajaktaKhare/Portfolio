@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo-container">
+    <img src="/images/portfolio.jpg" alt="Prajakta" class="logo-img"></div>
+<ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/certification">Certifications</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<div class="contact-container">
+    <!-- Left Side -->
+    <div class="contact-info fade-in-left">
+        <h1 class="contact-heading">Get in Touch </h1>
+        <p>
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
+        </p>
+
+        <div class="icon-text">
+            📧 <span>prajaktdakhare1911@gmail.com</span>
+        </div>
+        <div class="icon-text">
+            📍 <span>Seattle, WA</span>
+        </div>
+    </div>
+
+    <!-- Right Side -->
+    <div class="contact-form fade-in-right">
+        <form th:action="@{/contact}" th:object="${contactForm}" method="post">
+            <label>Name</label>
+            <input type="text" th:field="*{name}" placeholder="Your Name" required>
+
+            <label>Email</label>
+            <input type="email" th:field="*{email}" placeholder="Your Email" required>
+
+            <label>Message</label>
+            <textarea th:field="*{message}" rows="4" placeholder="Your Message" required></textarea>
+
+            <button type="submit">📨 Send Message</button>
+        </form>
+    </div>
+</div>
+</main>
+</body>
+</html>

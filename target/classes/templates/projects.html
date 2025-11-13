@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Prajakta Khare</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo-container">
+      <img src="/images/portfolio.jpg" alt="Prajakta" class="logo-img">
+    </div>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a class="active" href="/projects">Projects</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/certification">Certifications</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="projects-section">
+    <h1 class="projects-heading">My Projects</h1>
+    <p class="projects-intro">
+      A few highlights of the applications and experiments I’ve built — blending design, logic, and creativity.
+    </p>
+
+    <div class="project-grid">
+
+      <div class="project-card" th:each="project : ${projects}">
+        <img th:src="${project.image}" th:alt="${project.name}" class="project-img">
+        <h3 th:text="${project.name}"></h3>
+        <p th:text="${project.description}"></p>
+
+        <div class="tags">
+          <span th:each="tag : ${project.tags}" th:text="${tag}"></span>
+        </div>
+
+        <a th:href="${project.link}" target="_blank" class="view-btn">🔗 View Project</a>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+</body>
+</html>
