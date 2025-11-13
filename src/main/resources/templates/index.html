@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo-container">
+    <img src="/images/portfolio.jpg" alt="Prajakta" class="logo-img">
+</div>
+    <ul>
+      <li><a class="active" href="/">Home</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/skills">Skills</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/certification">Certifications</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Prajakta Khare</h1>
+      <h3><span id="typed-text"></span><span class="cursor">|</span></h3>
+  </section>
+
+  <section class="about-section">
+  <div class="about-text">
+    <h1>Hey there! 👋</h1>
+    <p>
+      I’m an aspiring software engineer excited about building skills and creating meaningful projects.  
+      Currently, I’m focused on learning modern technologies and improving my problem-solving abilities every day.
+    </p>
+    <p>
+      I’m passionate about coding, eager to collaborate, and ready to take on challenges that help me grow and contribute.
+    </p>
+    <a href="/contact" class="button">Let’s Connect →</a>
+  </div>
+
+  <div class="about-card">
+    <div class="emoji">👩‍💻</div>
+    <h3>Always Learning and building</h3>
+    <p>Committed to growth and new opportunities</p>
+  </div>
+</section>
+</main>
+
+<script>
+    // Typing text animation
+const typedText = document.getElementById("typed-text");
+const cursor = document.querySelector(".cursor");
+const phrases = ["Full stack developer", "AI & Web Enthusiast", "Problem Solver"];
+let phraseIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < phrases[phraseIndex].length) {
+    typedText.textContent += phrases[phraseIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 120);
+  } else {
+    setTimeout(erase, 1500);
+  }
+}
+function erase() {
+  if (charIndex > 0) {
+    typedText.textContent = phrases[phraseIndex].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 60);
+  } else {
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    setTimeout(type, 400);
+  }
+}
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(type, 500);
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+# Build outputs
+target/
+
+# Java class files
+*.class
+
+# Logs
+*.log
+
+# Mac files
+.DS_Store
+
+# Package files
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+target/
+HELP.md
