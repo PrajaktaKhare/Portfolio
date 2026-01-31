@@ -1,10 +1,10 @@
-# 📌Overview
+# Overview
 
 My Portfolio is a personal web application built to showcase my skills, projects, and technical foundation as an entry-level software engineer. The goal of this project is to demonstrate my ability to design, build, and deploy a complete application using modern development practices. 
 
 This portfolio emphasizes clarity, structure, and real-world relevance, making it easy for recruiters and hiring managers to evaluate my technical skills beyond a resume.
 
-# 🚀 Tech Stack
+#  Tech Stack
 
 > Frontend
 
@@ -28,7 +28,7 @@ This portfolio emphasizes clarity, structure, and real-world relevance, making i
 
 > Microsoft Azure
 
-# ✨ Key Features
+#  Key Features
 
 > Professional landing page with clear developer branding
 
@@ -42,7 +42,7 @@ This portfolio emphasizes clarity, structure, and real-world relevance, making i
 
 > Responsive layout for desktop and mobile devices
 
-# 🎯 Purpose & Motivation
+#  Purpose & Motivation
 
 This project was built to:
 
@@ -64,7 +64,7 @@ My Primary Focus
 
 > Deploying and managing a real application in the cloud
 
-# 🖥️ Screenshots
+#  Screenshots
 
 | Home Page | Projects |
 |----------|----------|
@@ -75,8 +75,8 @@ My Primary Focus
 | ![](./screenshots/skills.png) | ![](./screenshots/contact.png) |
 
 
-⚙️ Local Setup & Usage
-Prerequisites
+# Local Setup & Usage
+## Prerequisites
 
 > Java JDK 17 or higher
 
@@ -84,21 +84,28 @@ Prerequisites
 
 > Git
 
-Installation
-# Clone the repository
-git clone https://github.com/PrajaktaKhare/Portfolio.git
+## Installation
+### Clone the repository
+  ```bash
+  git clone https://github.com/PrajaktaKhare/Portfolio.git
+   ```
+### Navigate into the project
+```bash
+  cd my-portfolio
+   ```
 
-# Navigate into the project
-cd my-portfolio
 
-# Run the application
-mvn spring-boot:run
+### Run the application
+```bash
+  mvn spring-boot:run
+   ```
+
 
 Open your browser and visit:
 
 http://localhost:8080
 
-🔄 CI/CD & Deployment (Planned)
+# CI/CD & Deployment (Planned)
 
 This project is structured to support a CI/CD pipeline using GitHub Actions and Azure.
 
